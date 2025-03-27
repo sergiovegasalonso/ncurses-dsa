@@ -1,12 +1,15 @@
 #include <ncurses.h>
+#include "arithmetics/arithmetics.h"
 
-int main() {
+int main()
+{
     initscr();
 
     addstr("Hello World");
-    
+
+    int num1 = 10, num2 = 5;
+    printf("Addition: %d\n", add(num1, num2));
+
     endwin();
     return 0;
 }
-// Compile with: g++ main.cpp -o hello_world -lncurses
-// Run with: ./hello_world
