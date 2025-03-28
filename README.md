@@ -10,6 +10,6 @@ sudo apt-get install libncurses5-dev libncursesw5-dev
 
 ```sh
 gcc main.c -o main -lncurses
-# with module example
+# with modules example
 gcc main.c seryio/seryio.c seryio-ncurses/seryio-ncurses.c -o main -lncurses 
 ```

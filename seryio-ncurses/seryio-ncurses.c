@@ -2,7 +2,6 @@
 #include <ncurses.h>
 #include <stdlib.h>
 
-
 void ncurses_has_colors()
 {
     if (!has_colors())
