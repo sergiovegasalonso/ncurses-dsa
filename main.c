@@ -6,8 +6,8 @@
 int main()
 {
     // restrictions configuration
-    const int MINIMUM_ROWS = 200;
-    const int MINIMUM_COLS = 400;
+    const int MINIMUM_ROWS = 50;
+    const int MINIMUM_COLS = 100;
 
     // texts configuration
     char *windows_title = "SERGIO'S NCURSES APPLICATION";
