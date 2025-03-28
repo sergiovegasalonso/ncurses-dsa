@@ -4,14 +4,14 @@
 #include <string.h>
 
 /*
- * get_concat_string: concatenates two strings
+ * sry_concat_string: concatenates two strings
  * @str1: the first string
  * @str2: the second string
  * @return: a pointer to the concatenated string
  * this function concatenates two strings and returns a pointer to the new string.
  * if both strings are NULL, it returns NULL.
  */
-char *get_concat_string(const char *str1, const char *str2)
+char *sry_concat_string(const char *str1, const char *str2)
 {
     char *finalString = NULL;
     size_t n = 0;

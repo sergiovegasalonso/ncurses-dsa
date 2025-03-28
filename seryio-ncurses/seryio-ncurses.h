@@ -1,10 +1,10 @@
 #ifndef SERYIO_NCURSES_H
 #define SERYIO_NCURSES_H
 
-void ncurses_has_colors();
-void ncurses_start_color();
-void ncurses_init_pair(int pair, int fcolor, int bcolor);
-void ncurses_check_minimum_terminal_resolution(int min_rows, int min_cols);
+void srync_has_colors();
+void srync_start_color();
+void srync_init_pair(int pair, int fcolor, int bcolor);
+void srync_check_minimum_terminal_resolution(int min_rows, int min_cols);
 typedef struct
 {
     int start_height;
@@ -12,7 +12,7 @@ typedef struct
     int width;
     const char str;
     int color_pair;
-} ncurses_print_row_configuration_t;
-void ncurses_print_row(ncurses_print_row_configuration_t *config);
+} srync_print_row_configuration_t;
+void srync_print_row(srync_print_row_configuration_t *config);
 
 #endif // SERYIO_NCURSES_H
