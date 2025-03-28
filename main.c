@@ -1,17 +1,21 @@
 #include <ncurses.h>
 #include <stdio.h>
 #include "seryio/seryio.h"
+#include "seryio-ncurses/seryio-ncurses.h"
 
 int main()
 {
     char *message = "This is a test message";
     initscr();
 
-    addstr(get_concat_string(message, "\n"));
-    printw("Press any key to exit...");
-    refresh();
+    // colors configuration
+    ncurses_has_colors();
+    ncurses_start_color();
+    ncurses_init_pair(1, COLOR_RED, COLOR_BLACK);
 
-    getch();
+    bkgd(COLOR_PAIR(1));
+    //refresh();
+    getch();    
 
     endwin();
     return 0;

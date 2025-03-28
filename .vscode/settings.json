@@ -4,6 +4,7 @@
         "seryio.h": "c",
         "stdio.h": "c",
         "ncurses.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "string.h": "c"
     }
 }

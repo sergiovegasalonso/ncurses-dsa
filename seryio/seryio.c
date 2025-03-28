@@ -3,9 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
- * strings section
- */
+// strings
 char *get_concat_string(const char *str1, const char *str2)
 {
     char *finalString = NULL;
