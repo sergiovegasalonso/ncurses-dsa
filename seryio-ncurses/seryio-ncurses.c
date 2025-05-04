@@ -64,9 +64,9 @@ void srync_init_pair(int pair, int fcolor, int bcolor)
 */
 void srync_check_minimum_terminal_resolution(int min_rows, int min_cols)
 {
-    int rows, cols;
-    getmaxyx(stdscr, rows, cols);
-    if (rows < min_rows || cols < min_cols)
+    int terminal_rows, terminal_columns;
+    getmaxyx(stdscr, terminal_rows, terminal_columns);
+    if (terminal_rows < min_rows || terminal_columns < min_cols)
     {
         endwin();
         printf("Terminal size is too small. Minimum size is %d rows and %d columns.\n", min_rows, min_cols);
