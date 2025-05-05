@@ -75,6 +75,7 @@ void srync_check_minimum_terminal_resolution(int min_rows, int min_cols)
 }
 
 /*
+ * ????????????????????
  * srync_print_row: prints a row of characters in the terminal
  * @config: the configuration for the row
  * @return: void
@@ -91,5 +92,19 @@ void srync_print_row(srync_print_row_configuration_t *config)
             mvaddch(j, i, config->str);
         }
     }
+    attroff(COLOR_PAIR(config->color_pair));
+}
+
+/*
+ * srync_print_cell: prints a cell in the terminal
+ * @config: the configuration for the row
+ * @return: void
+ * this function prints a cell in the terminal. It takes a [x, y] position and configuration struct that contains
+ * the character to print and color pair.
+*/
+void srync_print_cell(short int x, short int y, srync_print_cell_configuration_t *config)
+{
+    attron(COLOR_PAIR(config->color_pair));
+    mvaddch(x, y, config->str);
     attroff(COLOR_PAIR(config->color_pair));
 }
